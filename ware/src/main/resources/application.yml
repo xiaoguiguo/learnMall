@@ -1,1 +1,13 @@
-
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.56.10:3306/learnmall_wms
+    username: root
+    password: 123456
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 11000

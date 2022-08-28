@@ -19,3 +19,19 @@ buildNumber.properties
 *.iws
 *.iml
 *.ipr
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.iml
+.idea
+
+# Compiled class file
+*.class
+
+# Log file
+*.log

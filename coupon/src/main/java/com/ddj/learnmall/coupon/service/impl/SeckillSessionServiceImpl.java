@@ -1,0 +1,29 @@
+package com.ddj.learnmall.coupon.service.impl;
+
+import org.springframework.stereotype.Service;
+import java.util.Map;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.ddj.common.utils.PageUtils;
+import com.ddj.common.utils.Query;
+
+import com.ddj.learnmall.coupon.dao.SeckillSessionDao;
+import com.ddj.learnmall.coupon.entity.SeckillSessionEntity;
+import com.ddj.learnmall.coupon.service.SeckillSessionService;
+
+
+@Service("seckillSessionService")
+public class SeckillSessionServiceImpl extends ServiceImpl<SeckillSessionDao, SeckillSessionEntity> implements SeckillSessionService {
+
+    @Override
+    public PageUtils queryPage(Map<String, Object> params) {
+        IPage<SeckillSessionEntity> page = this.page(
+                new Query<SeckillSessionEntity>().getPage(params),
+                new QueryWrapper<SeckillSessionEntity>()
+        );
+
+        return new PageUtils(page);
+    }
+
+}
